@@ -7,6 +7,8 @@ Usage: #definition
 * status = #draft
 * experimental = true
 * description = """CZ HDR Allergy Intolerance Model to this guide mapping"""
+//http://hl7.eu/fhir/hdr/ConceptMap/alerts2FHIR-eu-hdr
+//https://build.fhir.org/ig/hl7-eu/hdr/ConceptMap-alerts2FHIR-eu-hdr.html
 * group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-allergyIntolerance-hdr"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
 
