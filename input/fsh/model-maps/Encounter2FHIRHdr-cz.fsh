@@ -1,26 +1,26 @@
 Instance: encounter2FHIR-cz-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.cz/fhir/hdr/ConceptMap/encounter2FHIR-cz-hdr"
+* url = "https://hl7.cz/fhir/hdr/ConceptMap/encounter2FHIR-cz-hdr"
 * name = "Encounter2FHIRCzHdr"
 * title = "eHN Encounter Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """eHN HDR Encounter Model to this guide mapping"""
-* group[+].source = "http://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
-* group[=].target = "http://hl7.cz/fhir/base/StructureDefinition/organization-cz"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
+* group[=].target = "https://hl7.cz/fhir/base/StructureDefinition/organization-cz"
 * group[=].element[+].code = #Encounter.admission.admitter.organizationID
 * group[=].element[=].display = "A.2.3.3.5 - Admitting organisation ID"
 * group[=].element[=].target.code = #Organization.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(PractitionerRole).organization and where participant.type is 'ADM' "
+* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(PractitionerRole).organization and where participant.type is 'ADM'"
 * group[=].element[+].code = #Encounter.admission.referringHP.organizationID
 * group[=].element[=].display = "A.2.3.3.10 - Referring organisation ID"
 * group[=].element[=].target.code = #Organization.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(PractitionerRole).organization and where participant.type is 'REF' "
+* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(PractitionerRole).organization and where participant.type is 'REF'"
 * group[=].element[+].code = #Encounter.location.organization.identifier
 * group[=].element[=].display = "A.2.3.6.2 - Organisation Part ID"
 * group[=].element[=].target.code = #Organization.identifier
@@ -39,14 +39,14 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Encounter.location.location.managingOrganization; to be checked"
-* group[+].source = "http://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
-* group[=].target = "http://hl7.cz/fhir/core/StructureDefinition/practitioner-cz-core"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/practitioner-cz-core"
 * group[=].element[+].code = #Encounter.admission.admitter.identifier
 * group[=].element[=].display = "A.2.3.3.3 - Admitting professional ID"
 * group[=].element[=].target.code = #Practitioner.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) and where participant.type is 'ADM' "
+* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) and where participant.type is 'ADM'"
 * group[=].element[+].code = #Encounter.admission.admitter.name
 * group[=].element[=].display = "A.2.3.3.4 - Admitting professional name"
 * group[=].element[=].target.code = #Practitioner.name
@@ -59,7 +59,7 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.code = #Practitioner.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) and where participant.type is 'REF' "
+* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) and where participant.type is 'REF'"
 * group[=].element[+].code = #Encounter.admission.referringHP.name
 * group[=].element[=].display = "A.2.3.3.9 - Referring professional name"
 * group[=].element[=].target.code = #Practitioner.name
@@ -67,22 +67,22 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) or
 Encounter.participant.individual.ofType(PractitionerRole).practitioner"
-* group[+].source = "http://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
-* group[=].target = "http://hl7.cz/fhir/core/StructureDefinition/practitionerRole-cz-core"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/practitionerRole-cz-core"
 * group[=].element[+].code = #Encounter.admission.admitter.identifier
 * group[=].element[=].display = "A.2.3.3.3 - Admitting professional ID"
 * group[=].element[=].target.code = #PractitionerRole.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "and where participant.type is 'ADM' "
+* group[=].element[=].target.comment = "and where participant.type is 'ADM'"
 * group[=].element[+].code = #Encounter.admission.referringHP.identifier
 * group[=].element[=].display = "A.2.3.3.8 - Referring professional ID"
 * group[=].element[=].target.code = #PractitionerRole.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "and where participant.type is 'REF' "
-* group[+].source = "http://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
-* group[=].target = "http://hl7.cz/fhir/hdr/StructureDefinition/encounter-cz-hdr"
+* group[=].element[=].target.comment = "and where participant.type is 'REF'"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/encounter-cz-hdr"
 * group[=].element[+].code = #Encounter.type
 * group[=].element[=].display = "A.2.3.1 - Encounter type"
 * group[=].element[=].target.code = #Encounter.class
@@ -113,7 +113,7 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.code = #Encounter.participant.individual
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "where participant.type is 'ADM' "
+* group[=].element[=].target.comment = "where participant.type is 'ADM'"
 * group[=].element[+].code = #Encounter.admission.admitter.organization
 * group[=].element[=].display = "A.2.3.3.6 - Admitting organisation"
 * group[=].element[=].target.code = #Encounter.serviceProvider
@@ -199,8 +199,8 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.code = #Encounter.location.period
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "http://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
-* group[=].target = "http://hl7.cz/fhir/hdr/StructureDefinition/location-cz-hdr"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounter"
+* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/location-cz-hdr"
 * group[=].element[+].code = #Encounter.location.organization
 * group[=].element[=].display = "Organization"
 * group[=].element[=].target.code = #Location.managingOrganization
