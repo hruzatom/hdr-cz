@@ -52,9 +52,10 @@ Description: "Příklad pro HDR - Hladina hemoglobinu v krvi"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * note.text = "Hladina hemoglobinu je v normálním rozmezí."
 * specimen = Reference(Specimen-EDTA-1)
+* performer = Reference(Lab-HematologieBrno)
 
 Instance: hct-result
-InstanceOf: Observation
+InstanceOf: CZ_ObservationResultLaboratory
 Title: "Hematokrit"
 Description: "Příklad pro HDR - Hematokrit v krvi"
 * status = #final
@@ -71,9 +72,10 @@ Description: "Příklad pro HDR - Hematokrit v krvi"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * note.text = "Hematokrit je v normálním rozmezí."
 * specimen = Reference(Specimen-EDTA-1)
+* performer = Reference(Lab-HematologieBrno)
 
 Instance: rbc-result
-InstanceOf: Observation
+InstanceOf: CZ_ObservationResultLaboratory
 Title: "Erytrocyty"
 Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 * status = #final
@@ -90,9 +92,10 @@ Description: "Příklad pro HDR - Počet erytrocytů v krvi"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * note.text = "Počet erytrocytů je v normálním rozmezí."
 * specimen = Reference(Specimen-EDTA-1)
+* performer = Reference(Lab-HematologieBrno)
 
 Instance: wbc-result
-InstanceOf: Observation
+InstanceOf: CZ_ObservationResultLaboratory
 Title: "Leukocyty"
 Description: "Příklad pro HDR - Počet leukocytů v krvi"
 * status = #final
@@ -109,9 +112,11 @@ Description: "Příklad pro HDR - Počet leukocytů v krvi"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * note.text = "Počet leukocytů je v normálním rozmezí."
 * specimen = Reference(Specimen-EDTA-1)
+* performer = Reference(Lab-HematologieBrno)
+* note.text = "Výsledek je v normálním rozmezí."
 
 Instance: plt-result
-InstanceOf: Observation
+InstanceOf: CZ_ObservationResultLaboratory
 Title: "Trombocyty"
 Description: "Příklad pro HDR - Počet trombocytů v krvi"
 * status = #final
@@ -128,7 +133,8 @@ Description: "Příklad pro HDR - Počet trombocytů v krvi"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#N "Normal"
 * note.text = "Počet trombocytů je v normálním rozmezí."
 * specimen = Reference(Specimen-EDTA-1)
-
+* performer = Reference(Lab-HematologieBrno)
+* note.text = "Výsledek je v normálním rozmezí."
 
 Instance: Specimen-EDTA-1
 InstanceOf: Specimen
@@ -137,8 +143,6 @@ Title: "Vzorek krve – EDTA"
 * type = http://snomed.info/sct#122555007 "Venous blood specimen"
 * receivedTime = "2025-04-01T09:30:00+01:00"
 * subject = Reference(Mracena2)
-
-
 
 Instance: Lab-HematologieBrno
 InstanceOf: cz-organization-core
