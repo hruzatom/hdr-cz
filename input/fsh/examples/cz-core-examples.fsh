@@ -94,8 +94,11 @@ Usage: #inline
 
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
-* type[+] = $drzar#320 "Samost. ordinace všeob. prakt. lékaře"
+* type[+] = $cz-drzar#320 "Samost. ordinace všeob. prakt. lékaře"
 * name = "MUDr. Stanislava Kubšová"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Samost. ordinace všeob. prakt. lékaře, MUDr. Stanislava Kubšová</div>"
+* text.status = #generated  
+
 
 Instance: Organization-1
 InstanceOf: CZ_OrganizationCore
@@ -103,7 +106,7 @@ Usage: #example
 Description: "An example of the organization of a provider"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "27520536"
-* type[DRZAR] = $drzar#102 "Nemocnice"
+* type[DRZAR] = $cz-drzar#102 "Nemocnice"
 * name = "Nemocnice Chrudim"
 * telecom.system = #phone
 * telecom.value = "+420 603 853 227"
@@ -172,7 +175,8 @@ Instance: Device-Pacemaker
 InstanceOf: CZ_MedicalDevice
 Usage: #example
 Description: "Heart pacemaker Medtronic W1DR01"
-
+* id = "Device-Pacemaker"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-medical-device"
 * manufacturer = "Medtronic"
 * modelNumber = "W1DR01"
 * type = $sct#14106009 "Kardiostimulátor"
@@ -185,8 +189,7 @@ Usage: #example
 Description: "General practitioner's office"
 
 * id = "practitionerrole1"
-* meta.profile[0] = "https://ncez.mzcr.cz/fhir/StructureDefinition/CZ_PractitionerRoleCore"
-
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-07-01T13:30:55.864+00:00"
 * identifier.system = "http://www.acme.org/practitioners"
@@ -217,18 +220,16 @@ Instance: RegisteringProviderExample-gynecology
 InstanceOf: CZ_OrganizationCore
 Title: "Organization: Registering healthcare provider example"
 Description: "Example of registering healthcare provider"
-Usage: #inline
-
+Usage: #example
 * id = "RegisteringProviderExample-gynecology"
-* meta.profile[0] = "https://ncez.mzcr.cz/fhir/StructureDefinition/CZ_OrganizationCore"
-
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core"
+* identifier[+].system = $cz-organization-ico
 * identifier[=].value = "456789857"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icz"
+* identifier[+].system = $cz-organization-icz
 * identifier[=].value = "12345000"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/icp"
+* identifier[+].system = $cz-organization-icp
 * identifier[=].value = "12345678"
-* type[+] = $drzar#323 "Samostatná ordinace PL - gynekologa"
+* type[+] = $cz-drzar#323 "Samostatná ordinace PL - gynekologa"
 * name = "MUDr. Jana Kouzelná"
 * telecom.system = #phone
 * telecom.value = "+420 603 853 227"
@@ -243,13 +244,11 @@ Instance: Practitioner-Admitter
 InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Participant Admitter HDR"
-
 * id = "Practitioner-Admitter"
-* meta.profile[0] = "https://ncez.mzcr.cz/fhir/StructureDefinition/CZ_PractitionerCore"
-
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
+* identifier[+].system = $cz-practitioner-NRZP
 * identifier[=].value = "987654321"
-//* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/clk"
+//* identifier[+].system = $cz-practitioner-CLK 
 //* identifier[=].value = "4567891230"
 * name.use = #usual
 * name.text = "MUDr. Karel Volný"
@@ -264,11 +263,10 @@ Usage: #example
 Description: "Participant Referrer HDR"
 
 * id = "Practitioner-Referrer"
-* meta.profile[0] = "https://ncez.mzcr.cz/fhir/StructureDefinition/CZ_PractitionerCore"
-
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
+* identifier[+].system = $cz-practitioner-NRZP
 * identifier[=].value = "987654777"
-//* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/clk"
+//* identifier[+].system = $cz-practitioner-CLK
 //* identifier[=].value = "4567891777"
 * name.use = #usual
 * name.text = "MUDr. Jiří Zdvořilý"
@@ -282,41 +280,38 @@ Instance: Practitioner-Referrer-detail
 InstanceOf: CZ_PractitionerRoleCore
 Usage: #example
 Description: "practitioner's detail"
-
 * id = "Practitioner-Referrer-detail"
-* meta.profile[0] = "https://ncez.mzcr.cz/fhir/StructureDefinition/CZ_PractitionerRoleCore"
-
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * practitioner = Reference(CZ_PractitionerCore/Practitioner-Referrer) "MUDr. Jiří Zdvořilý"
-* organization = Reference(CZ_OrganizationCore/Organization-1) "Nemocnice Chrudim"
-* code = $nrzp_povolani#L00 "Lékař"
+* organization = Reference(CZ_OrganizationCore/Organization-Referrer) "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
+* code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sct#419192003 "Interní lékařství"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulance interního lékařství, MUDr. Jiří Zdvořilý</div>"
+* text.status = #generated  
 
 //-----------------------------------------------------
 Instance: Patient-Novak-Petr
 InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Example of patient Petr Novak with identification by czech national identifiers (RID, RCIS), registrating healthcare provider and contact information"
-
-* contained[+] = practitionerrole1  
+/** contained[+] = practitionerrole1  
 * contained[+] = Practitioner-2
 * contained[+] = Organization-1 
-
+*/
 // Patient details identification
 * id = "Novak-Petr"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * identifier[+]
-  * system = "https://ncez.mzcr.cz/fhir/sid/rcis"
+  * system = $cz-patient-rcis
   * value = "8506150015"
   * use = #official
 * identifier[+]
-  * system = "https://ncez.mzcr.cz/fhir/sid/rid"
+  * system = $cz-patient-rid
   * value = "1597778923"
-
 //Patient citizenship
 * extension[citizenship].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
-
 //Patient nationality
 /** extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ*/
-
 //Patient name, address and contact information
 * name.use = #usual
 * name.family = "Novák"
@@ -345,11 +340,10 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 //Patient gender, birthday
 * gender = #male
 * birthDate = "1985-06-15"
-
 //Contact persons and their details
-//guardian
-* contact[+].relationship.coding[+] = $v3-RoleCode#MTH "Matka"
-* contact[=].relationship.coding[+] = $v2-0131#GUARD "Zákonný zástupce"
+//guardian -contact person
+* contact[+].relationship.coding[+] = $cz-patient-relationship#MTH "Matka"
+* contact[=].relationship.coding[+] = $v2-0131#N "Kontaktní osoba"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Nováková"
 * contact[=].name.given[0] = "Alena"
@@ -365,9 +359,8 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contact[=].address[=].city = "Ostrava"
 * contact[=].address[=].postalCode = "70800"
 * contact[=].address[=].country = "CZ"
-
 //contact person
-* contact[+].relationship.coding[+] = $v3-RoleCode#FRND "přítel/přítelkyně"
+* contact[+].relationship.coding[+] = $cz-patient-relationship#FRND "přítel/přítelkyně"
 * contact[=].relationship.coding[+] = $v2-0131#N "Kontaktní osoba"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Dlouhá"
@@ -384,16 +377,91 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 * contact[=].address[=].city = "Trenčín"
 * contact[=].address[=].postalCode = "12345"
 * contact[=].address[=].country = "SK"
-
 //Patient communication 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
 * communication[+].language = urn:ietf:bcp:47#en
-
 //Patient general practitioner
 * extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "Všeobecné lékařské služby"
 /** extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample-gynecology)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Gynekologické a porodnické služby"*/
 
+//------------------------------------------------------
+Instance: Practitioner-Author
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Participant Referrer HDR"
 
+* id = "Practitioner-Author"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
+* identifier[+].system = $cz-practitioner-NRZP
+* identifier[=].value = "151607357"
+//* identifier[+].system = $cz-practitioner-CLK
+//* identifier[=].value = "4567891777"
+* name.use = #usual
+* name.text = "MUDr. Ivan Anděl"
+* telecom[+].system = #phone
+* telecom[=].value = "+420 603 777 227"
+* telecom[=].use = #work
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"
+* text.status = #generated
+
+//-----------------------------------------------------
+Instance: Practitioner-Author-detail
+InstanceOf: CZ_PractitionerRoleCore
+Usage: #example
+Description: "practitioner's detail"
+
+* id = "Practitioner-Author-detail"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
+* practitioner = Reference(CZ_PractitionerCore/Practitioner-Author) "MUDr. Ivan Anděl"
+* organization = Reference(CZ_OrganizationCore/Organization-1) "Nemocnice Chrudim"
+* code = $cz-nrzp_povolani#L00 "Lékař"
+* specialty = $sct#419192003 "Interní lékařství"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">MUDr. Ivan Anděl, interní lékař, Nemocnice Chrudim, Václavská 570, 537 01 Chrudim, tel: +420 603 777 227</div>"
+* text.status = #generated
+
+//-----------------------------------------------------
+Instance: Organization-Referrer
+InstanceOf: CZ_OrganizationCore
+Title: "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
+Description: "Example of ambulatory physician"
+Usage: #inline
+
+* id = "Organization-Referrer"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core"
+* identifier[+].system = $cz-organization-ico 
+* identifier[=].value = "456789811"
+* identifier[+].system = $cz-organization-icz
+* identifier[=].value = "12345000"
+* identifier[+].system = $cz-organization-icp
+* identifier[=].value = "12345699"
+* type[+] = $cz-drzar#300 "Sdružení ambulantních zařízení"
+* name = "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
+* telecom.system = #phone
+* telecom.value = "+420 603 853 888"
+* telecom.use = #work
+* address.line = "Krátká 29, 70500 Ostrava"
+* address.city = "Ostrava"
+* address.postalCode = "70500"
+* address.country = "CZ"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ambulance interního lékařství, MUDr. Jiří Zdvořilý, Krátká 29, 70500 Ostrava, tel: +420 603 853 888</div>"
+* text.status = #generated
+
+//-----------------------------------------------------
+Instance: Practitioner-UZV
+InstanceOf: CZ_PractitionerCore
+Usage: #example
+Description: "Participant UZV HDR"
+* id = "Practitioner-UZV"
+* meta.profile[0] = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
+* identifier[+].system = $cz-practitioner-NRZP
+* identifier[=].value = "987654322"
+//* identifier[+].system = $cz-practitioner-CLK 
+//* identifier[=].value = "4567891231"
+* name.use = #usual
+* name.text = "MUDr. Karel Janák"
+* telecom[+].system = #phone
+* telecom[=].value = "+420 603 853 287"
+* telecom[=].use = #work

@@ -64,3 +64,43 @@ Alias: $BundleEuHdr = http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr
 //Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
 
 //=========================
+//CZ Alias
+Alias: $cz-patient-rcis = https://ncez.mzcr.cz/fhir/sid/rcis
+Alias: $cz-patient-rid = https://ncez.mzcr.cz/fhir/sid/rid
+Alias: $cz-patient-relationship = 	http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $cz-practitioner-NRZP = https://ncez.mzcr.cz/fhir/sid/nrzp
+Alias: $cz-practitioner-CLK = https://ncez.mzcr.cz/fhir/sid/clk
+Alias: $cz-organization-ico = https://ncez.mzcr.cz/fhir/sid/ico
+Alias: $cz-organization-icz = https://ncez.mzcr.cz/fhir/sid/icz
+Alias: $cz-organization-icp = https://ncez.mzcr.cz/fhir/sid/icp
+Alias: $cz-drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
+Alias: $cz-nrzp_povolani = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani
+Alias: $cz-encounter-typ-kontaktu = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $cz-encounter-zdroj-prijeti = http://hl7.org/fhir/ValueSet/encounter-admit-source
+Alias: $cz-encounter-pravni-okolnosti-prijeti = http://hl7.org/fhir/ValueSet/encounter-type
+Alias: $cz-encounter-cil-propusteni = 	http://hl7.org/fhir/ValueSet/encounter-discharge-disposition
+Alias: $cz-encounter-urgentnost-prijeti =  http://hl7.eu/fhir/hdr/ValueSet/admission-urgency-eu-hdr
+Alias: $cz-encounter-typ-prijeti = http://hl7.eu/fhir/hdr/ValueSet/admission-type-eu-hdr
+Alias: $cz-allergyintolerance-typ-reakce = 	http://hl7.org/fhir/ValueSet/allergy-intolerance-type
+Alias: $cz-allergyintolerance-puvodce = http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips
+Alias: $cz-allergyintolerance-riziko = http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality
+Alias: $cz-allergyintolerance-reakce = http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips
+Alias: $cz-allergyintolerance-reakce-zavaznost = http://hl7.org/fhir/ValueSet/reaction-event-severity
+Alias: $cz-medicationStatement-reason-status = http://hl7.org/fhir/ValueSet/reason-medication-status-codes
+Alias: $cz-medicationStatement-category = http://hl7.org/fhir/ValueSet/medication-statement-category 
+Alias: $cz-medicationStatement-route = http://hl7.org/fhir/ValueSet/route-codes
+Alias: $cz-medication-DLP = https://hl7.cz/fhir/core/ValueSet/dlplecivepripravky-cz-vs
+Alias: $cz-medication-DLPForma =  https://hl7.cz/fhir/core/ValueSet/dlpformy-cz-vs
+Alias: $cz-medicationDLPLecive-latky = https://hl7.cz/fhir/core/ValueSet/dlplecivelatky-cz-vs
+
+//=========================
+//Other
+Alias: $composition-category = http://hl7.org/fhir/ValueSet/document-classcodes
+Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
+Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+Alias: $encounter-participant-type = http://hl7.org/fhir/ValueSet/encounter-participant-type
+Alias: $MKN10 = http://hl7.org/fhir/sid/icd-10
+Alias: $Jednotky = http://hl7.org/fhir/ValueSet/ucum-units
+Alias: $atc = http://www.whocc.no/atc
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $observation-interpretation = http://hl7.org/fhir/ValueSet/observation-interpretation

@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Subject Model to this guide mapping"""
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * group[=].element[+].code = #subjectIdentification
 * group[=].element[=].display = "A.1.1 - Identification of the patient/subject"
 * group[=].element[=].target.code = #Patient
@@ -34,23 +34,21 @@ Usage: #definition
 * group[=].element[=].target.code = #Patient.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equal					
-* group[=].element[+].code = #subjectIdentification.nationality
-* group[=].element[=].display = "A.1.1.5 - Nationality"
-* group[=].element[=].target.code = #Patient.extension:nationality.valueCodeableConcept		
+* group[=].element[+].code = #subjectIdentification.Citizenship
+* group[=].element[=].display = "A.1.1.5 - Citizenship"
+* group[=].element[=].target.code = #Patient.extension:Citizenship.valueCodeableConcept		
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "http://hl7.org/fhir/StructureDefinition/patient-nationality"
 * group[=].element[+].code = #subjectIdentification.gender
 * group[=].element[=].display = "A.1.1.6 - Gender"
 * group[=].element[=].target.code = #Patient.gender					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equal					
-* group[=].element[+].code = #subjectIdentification.countryOfAffiliation
-* group[=].element[=].display = "A.1.1.7 - Country of affiliation"
-* group[=].element[=].target.code = #Patient
+* group[=].element[+].code = #subjectIdentification.Communication
+* group[=].element[=].display = "A.1.1.7 - Communication - Language"
+* group[=].element[=].target.code = #Patient.Communication
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #unmatched					
-* group[=].element[=].target.comment = "Not mapped on purpose"
+* group[=].element[=].target.equivalence = #equal					
 * group[=].element[+].code = #subjectContact
 * group[=].element[=].display = "A.1.2 - Patient/subject related contact information"
 * group[=].element[=].target.code = #Patient					
@@ -117,7 +115,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitioner-eu-core"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
 * group[=].element[+].code = #subjectContact.preferredHP
 * group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
 * group[=].element[=].target.code = #Practictioner
@@ -144,7 +142,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitionerRole-eu-core"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * group[=].element[+].code = #subjectContact.preferredHP
 * group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
 * group[=].element[=].target.code = #PractictionerRole
@@ -185,3 +183,4 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "preferred"
+

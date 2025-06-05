@@ -112,3 +112,47 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 * valueQuantity.value = 70
 * valueQuantity.unit = "kg"
 * valueQuantity.system = "http://unitsofmeasure.org"
+
+//-----------------------------------------
+Instance: Observation-UZV-Novak
+InstanceOf: Observation
+Usage: #example
+Title: "UZV - Novák Petr"
+Description: "Czech HDR - example of an ultrasound observation for Novák Petr"
+* id = "Observation-UZV-Novak"
+* status = #final
+* category = $observation-category#imaging  //http://terminology.hl7.org/CodeSystem/observation-category
+* code = $loinc#24719-7 "Ultrasound of groin"
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2025-03-10T10:00:00+01:00"
+* performer = Reference(Practitioner-UZV)
+* valueString = "UZ vyšetření pravého třísla: v oblasti tříselného kanálu patrný hypoechogenní vak komunikující s peritoneální dutinou, obsahující střevní kličku. Obsah je mobilní, bez známek ischemie. Závěr: vpravo tříselná kýla bez známek komplikace."
+
+//-----------------------------------------
+Instance: Observation-CRP-Novak
+InstanceOf: Observation
+Usage: #example
+Title: "CRP - Novák Petr"
+Description: "Czech HDR - example of CRP observation for Novák Petr"
+* id = "Observation-CRP-Novak"
+* status = #final
+* category = $observation-category#Laboratory  //http://terminology.hl7.org/CodeSystem/observation-category
+* code = $loinc#1988-5 "C reactive protein"
+* subject = Reference(Patient-Novak-Petr)
+* effectiveDateTime = "2025-03-01T10:00:00+01:00"
+* performer = Reference(Practitioner-UZV)
+* valueQuantity.value = 6.0
+* valueQuantity.unit = "mg/L"
+* valueQuantity.system = $Jednotky
+* valueQuantity.code = #"mg/L"
+* referenceRange[0].low.value = 0.0
+* referenceRange[0].low.unit = "mg/L" 
+* referenceRange[0].low.system = $Jednotky
+* referenceRange[0].low.code = #"mg/L"
+* referenceRange[0].high.value = 10.0
+* referenceRange[0].high.unit = "mg/L"
+* referenceRange[0].high.system = $Jednotky
+* referenceRange[0].high.code = #"mg/L"
+* referenceRange[0].text = "Norma: 0–10 mg/L"
+* interpretation[0].coding[0].code  = $observation-interpretation#N "Normal" 
+
