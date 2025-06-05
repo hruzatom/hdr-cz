@@ -17,7 +17,8 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
-jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+# jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#203 "Czech Republic (CZE)"
 publisher:
   name: HL7 Czech Republic
   url: https://www.hl7.cz/
@@ -46,10 +47,6 @@ dependencies:
   ihe.pharm.mpd: current
   hl7.fhir.eu.extensions: current
   hl7.fhir.cz.lab: current
-  
-  
-  
-    
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
@@ -157,9 +154,9 @@ menu:
 #  Guidance:
 #    General guidance: general-guidance.html
 #    Identifiers: identifiers.html
-  Implementation: implementation.html
+#  Implementation: implementation.html
   Artifacts: artifacts.html
-    # Czech artifacts: 
+    # Czech artifacts:
     #Profiles and extensions: profiles-and-extensions.html
 #  About:
   Downloads: downloads.html
@@ -250,7 +247,7 @@ menu:
         #- StructureDefinition/FunctionalStatusCz
         #- StructureDefinition/PlanOfCareCz
         #- StructureDefinition/MedicationSummaryCz
-#  
+#
     #logicalModelsMaps:
       #name:  eHN Logical Model mappings (Informative)
       #description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.

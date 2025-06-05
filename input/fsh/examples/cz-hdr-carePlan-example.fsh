@@ -9,7 +9,7 @@ Description: "Czech HDR - example of a care plan"
 * intent = #plan
 * title = "Post-Discharge Care Plan"
 * addresses = Reference(CZ-Condition-HDR-Example)
-* description = "Care plan for patient post-discharge following heart failure treatment."
+* description = "Care plan for patient post-discharge following critical heart failure treatment."
 * period.start = "2025-01-10T08:00:00+01:00"
 * period.end = "2025-06-10T08:00:00+01:00"
 * subject = Reference(Mracena2)
