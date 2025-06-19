@@ -9,6 +9,12 @@ This guide does not describe how to exchange this message.
 
 ### Information Models
 
+<div>
+  <img src="hdr_schema_EN.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+  <p><strong>Fig. 1: Hospital discharge report structure</strong></p>
+</div>
+
+
 Basic Sections of the Hospital Discharge Report
 
 | Section |	Cardinality	| Obligation | Link |
@@ -46,4 +52,6 @@ This guide is divided into several pages which are listed at the top of each pag
 ### IP statements
 
 {% include ip-statements.xhtml %}
+
+
 

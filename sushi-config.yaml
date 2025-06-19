@@ -9,7 +9,7 @@ name: HL7CzHospitalDischargeIg
 title: HL7 Czech Hospital Discharge Report Implementation Guide
 description: This guide contains implementation specification for the HL7 Czech Hospital Discharge Report
 status: draft # draft | active | retired | unknown
-version: 0.0.1
+version: 0.0.2
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -71,8 +71,12 @@ dependencies:
 pages:
   index.md:
     title: Home
+  index-cs.md:
+    title: Domovská stránka
   general-semantics.md:
     title: Introduction
+  logicalModel.md:
+    title: Logical Models  
   functional-view.md:
     title: Functional view
   general-semantics-cs.md:
@@ -81,10 +85,44 @@ pages:
     title: Funkční specifikace
   artifacts.xml:
     title: Summary artifacts
+  model-map.md:
+    title: Model Maps
 # profiles-and-extensions.md:
 #   title: Profiles and extensions
   downloads.md:
     title: Download
+  ehn-guidelines-cs.md:
+    title: eHN - Guidelines (cs)
+  ehn-guidelines.md:
+    title: eHN - Guidelines (en)
+
+  # === MAP ====
+  HospitalDischargeReport-map.html:
+    title: HospitalDischargeReport Relationships
+  Header-map.html:
+    title: Header Relationships
+  Subject-map.html:
+    title: Subject Relationships
+  InPatientEncounter-map.html:
+    title: InPatientEncounter Relationships  
+  AdmissionEvaluation-map.html:
+    title: AdmissionEvaluation Relationships
+  ObjectiveFindings-map.html:
+    title: ObjectiveFindings Relationships
+  FunctionalStatus-map.html:
+    title: FunctionalStatus Relationships
+  HospitalStay-map.html:
+    title: HospitalStay Relationships
+  PatientHistory-map.html:
+    title: PatientHistory Relationships
+  Alerts-map.html:
+    title: Alerts Relationships
+  AdvanceDirectives-map.html:
+    title: AdvanceDirectives Relationships
+  PlanOfCare-map.html:
+    title: PlanOfCare Relationships
+  MedicationSummary-map.html:
+    title: MedicationSummary Relationships
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -156,10 +194,16 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
+  Home:
+    Home (en): index.html
+    Home (cs): index-cs.html
   Introduction:
+    eHN Guidelines (en): ehn-guidelines.html
+    Model Maps: model-map.html
+    Logical Models: logicalModel.html
     General semantics: general-semantics.html
     Content: general-semantics.html#content
+    eHN Guidelines (cs): ehn-guidelines-cs.html
     Obecná sémantika: general-semantics-cs.html
     Obsah: general-semantics-cs.html#obsah
   Functional view:

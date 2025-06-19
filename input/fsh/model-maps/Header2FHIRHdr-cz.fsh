@@ -125,7 +125,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "where attester.mode = 'legal'"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
+* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/HeaderHdrCz"
 * group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-bundle-hdr"
 * group[=].element[+].code = #Header.documentMetadata.identifier
 * group[=].element[=].display = "A.1.8.1 - Document ID"
